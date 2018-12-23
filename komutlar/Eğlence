@@ -1,0 +1,36 @@
+const Discord = require('discord.js');
+const ayarlar = require('../ayarlar.json');
+
+var prefix = ayarlar.prefix;
+
+exports.run = (client, message, params) => {
+  const embedyardim = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0x00ffff)
+  .addField("** :tada: Eğlence Komutları :tada:**", `ca!eğlence = ca!atatürk = Rastgele Atatürkün Fotoğraflarını Gösterir. \nca!starwars = StarWars (Pixel Formatında) Filmini Gösterir. \nca!banned = Dene ve Gör! \nca!kahkaha = Kahkaha Atarsınız. \nca!nah = Nah Çekersiniz :D \nca!stresçarkı = Stres Çarkı Çevirirsiniz. \nca!emojiyazı = Emojiyle Yazmanızı Sağlar  \nca!herkesebendençay = Herkese Çay Alırsınız. \nca!koş = Koşarsınız.\nca!çayiç = Çay İçersiniz. \nca!çekiç = İstediğiniz Kişiye Çekiç Atarsınız. \nca!çayaşekerat = Çaya Şeker Atarsınız. \nca!yumruk-at = Yumruk Atarsınız. \nca!şanslısayım = Bot Sizin Şanslı Sayınızı Söyler. `)
+  if (!params[0]) {
+    const commandNames = Array.from(client.commands.keys());
+    const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
+    message.channel.send(embedyardim);
+  } else {
+    let command = params[0];
+    if (client.commands.has(command)) {
+      command = client.commands.get(command);
+      message.author.send('', `= ${command.help.name} = \n${command.help.description}\nDoğru kullanım: ` + prefix + `${command.help.usage}`);
+    }
+  }
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['h', 'halp', 'help', 'y'],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'eğlence',
+  description: 'Eğlence Komutlarını Gösterir',
+  usage: 'eğlence [komut]'
+};

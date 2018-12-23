@@ -1,0 +1,36 @@
+const Discord = require('discord.js');
+const ayarlar = require('../ayarlar.json');
+
+var prefix = ayarlar.prefix;
+
+exports.run = (client, message, params) => {
+  const embedyardim = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0x00ffff)
+  .addField("** :busts_in_silhouette: Kullanıcı Komutları :busts_in_silhouette:**", `ca!report = İstediğiniz Kullanıcıyı Reportlarsınız. \nca!kısalt = İstediğiniz Linki Kısaltarak Özelleştire Bilirsiniz. \nca!öneri = BOT 'la İlgili Önerilerinizi Yapımcıya İletir \nca!yaz = Bota İsediğinizi Yazdırırsınız. \nca!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir. \nca!sunucuresmi = Bulunduğunuz Sunucunun Resmin Gösterir. \nca!kullanıcıbilgim = Sizin Hakkınızda Bilgi Verir. \nca!avatarım = Avatarınınızı Gösterir. `)
+  if (!params[0]) {
+    const commandNames = Array.from(client.commands.keys());
+    const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
+    message.channel.send(embedyardim);
+  } else {
+    let command = params[0];
+    if (client.commands.has(command)) {
+      command = client.commands.get(command);
+      message.author.send('', `= ${command.help.name} = \n${command.help.description}\nDoğru kullanım: ` + prefix + `${command.help.usage}`);
+    }
+  }
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['h', 'halp', 'help', 'y'],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'kullanıcı',
+  description: 'Eğlence Komutlarını Gösterir',
+  usage: 'kullanıcı [komut]'
+};
