@@ -14,7 +14,7 @@ const log = message => {
 };
 
 client.on("ready", () => {
-  client.user.setGame(prefix + 'yardım | 7/24 Hizmetinizdeyiz :) | Yeni Özellikler Geldi Bakmak İçin ca!yenilikler  ! |' )
+  client.user.setGame(prefix + 'yardım | Yardım Komutları Güncellendi ! |' )
   console.log("Bağlandım!")
 });
 
