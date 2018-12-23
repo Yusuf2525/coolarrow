@@ -15,7 +15,7 @@ exports.run = (client, message, params) => {
     .setColor(3447003)
     .setTimestamp()
     .setDescription('')
-		.setImage(`https://images-ext-2.discordapp.net/external/eAld_JG27uG5qhbjvyn-CyKwGvp3rQ8lDX5Pec03Ffo/https/goo.gl/ZaBk9C?width=400&height=227`)
+		.setImage(`https://cdn.yeniakit.com.tr/images/news/625/cayda-seker-kullanma-aliskanligini-birakmanin-yollari-h1525081335-7c213f.jpg`)
     return message.channel.sendEmbed(sunucubilgi);
     }
 };

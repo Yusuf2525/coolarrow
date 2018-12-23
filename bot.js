@@ -14,9 +14,11 @@ const log = message => {
 };
 
 client.on("ready", () => {
-  client.user.setGame(prefix + 'yardım | Yardım Komutları Güncellendi ! |' )
+  client.user.setGame(prefix + "yardım | Bakım Bitti | Yeni Özellikler İçin: ca!yenilikler  |" )
   console.log("Bağlandım!")
 });
+
+
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();

@@ -15,7 +15,7 @@ exports.run = (client, message, params) => {
     .setColor(3447003)
     .setTimestamp()
     .setDescription('')
-		.setImage(`https://media.giphy.com/media/qrOTVsvYm1JIc/giphy.gif`)
+		.setImage(`https://media1.tenor.com/images/e45ac27ba1f05e566abc21f6832c01e4/tenor.gif?itemid=12320954`)
     return message.channel.sendEmbed(sunucubilgi);
     }
 };

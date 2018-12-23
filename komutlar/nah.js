@@ -18,9 +18,7 @@ exports.run = (client, message, args) => {
     return message.channel.sendEmbed(sunucubilgi);
     }
 
-    let username = member.user.username;
-    member.send('Sunucuya Hoş Geldin!');
-    member.guild.defaultChannel.send('');
+
 };
 
 exports.conf = {
