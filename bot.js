@@ -18,21 +18,6 @@ client.on("ready", () => {
   console.log("Bağlandım!")
 });
 
-bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'hosgeldiniz-log');
-  if (!channel) return;
-  if(!channel) return message.channel.send(" `hosgeldiniz-log` İsminde Yazı Kanalı Bulamıyorum.!");
-
-  channel.send(`Sunucuya hoşgeldiniz, ${member}`);
-  const sunucubilgi = new Discord.RichEmbed()
-  .setAuthor(`Aramıza Hoşgeldin ${member}`)
-  .setColor(3447003)
-  .setTimestamp()
-  .setDescription('')
-  .setImage(`https://cdn.discordapp.com/attachments/468415413231812619/524551628376899584/hg.gif`)
-  return message.channel.sendEmbed(sunucubilgi);
-});
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
