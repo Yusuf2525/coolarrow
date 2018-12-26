@@ -11,11 +11,11 @@ module.exports = client => {
   client.user.setStatus("online");
    var oyun = [
         "Bot Saldırıya Uğramıştır Sunuculara Gelen Kötü Olaylar Yüzünden Özür Dileriz ",
-        "Destek sunucumuz saldırıya uğradı sunucumuza gelmek için ca!yardımsunucum yazabilirsiniz",
+        "Destek sunucumuz saldırıya uğradı sunucumuza gelmek için ca!yardımsunucusu yazabilirsiniz",
         "💪 7/24 Aktif!",  
         "💡 ca!davet | Botumuzu ekleyin",
         "👨 Size Hizmet Vermekten Mutluluk duyuyoruz",
-        "🌍 Sunucu Ayarları İçin ca!sunucu",
+        "🌍 Sunucu Yetkilisi Ayarları İçin ca!yetkili",
         "ca!yardım 🔥 + ca!davet 🔥 + ca!öneri"
     ];
 
