@@ -286,7 +286,7 @@ client.on('message', msg => {
     .setColor("RANDOM")
     
     if (!msg.guild.roles.exists("name", "Destek")) return msg.author.send(hatay) + msg.guild.owner.send(`${msg.guild.name} Adlı Sunucunda, \`Destek\` Adlı Bir Rol Olmadığı İçin, Hiçkimse Destek Talebi Açamıyor!`);
-    if(msg.guild.channels.find('name', 'Talepler')) {
+    if(msg.guild.channels.find('name', 'talepler')) {
       msg.guild.createChannel(`destek-${msg.author.id}`, "text").then(c => {
       const category = msg.guild.channels.find('name', 'Talepler')
       c.setParent(category.id)
