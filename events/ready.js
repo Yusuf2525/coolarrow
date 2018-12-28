@@ -15,9 +15,8 @@ module.exports = client => {
         "💪 7/24 Aktif!",  
         "💡 ca!davet | Botumuzu ekleyin",
         "👨 Size Hizmet Vermekten Mutluluk duyuyoruz",
-        "🌍 Sunucu Yetkilisi Ayarları İçin ca!yetkili",
+        "🔥 Yeni Gelen Özellikler İçin ca!Yenilikler 🔥",
         "ca!yardım 🔥 + ca!davet 🔥 + ca!öneri"
-        "🔥 Yeni Komutlar için ca!yenilikler 🔥"
     ];
 
     setInterval(function() {
