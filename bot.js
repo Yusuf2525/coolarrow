@@ -283,9 +283,10 @@ client.on('message', msg => {
   if (msg.channel.name== 'destek') { 
     const hatay = new Discord.RichEmbed()
     .addField(" Hata ", `Bu Sunucuda \`Destek\` Adında Bir Rol Yok!`)
+    .setColor("RANDOM")
     
     if (!msg.guild.roles.exists("name", "Destek")) return msg.author.send(hatay) + msg.guild.owner.send(`${msg.guild.name} Adlı Sunucunda, \`Destek\` Adlı Bir Rol Olmadığı İçin, Hiçkimse Destek Talebi Açamıyor!`);
-    if(msg.guild.channels.find('name', 'talepler')) {
+    if(msg.guild.channels.find('name', 'Talepler')) {
       msg.guild.createChannel(`destek-${msg.author.id}`, "text").then(c => {
       const category = msg.guild.channels.find('name', 'talepler')
       c.setParent(category.id)
@@ -304,6 +305,7 @@ client.on('message', msg => {
           READ_MESSAGES: true
       });
 
+      const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setAuthor(`${client.user.username} | Destek Sistemi`)
       .addField(`Merhaba ${msg.author.username}!`, `Destek Yetkilileri burada seninle ilgilenecektir. \nDestek talebini kapatmak için \`${prefix}kapat\` yazabilirsin.`)
