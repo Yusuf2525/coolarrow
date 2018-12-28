@@ -17,6 +17,7 @@ module.exports = client => {
         "👨 Size Hizmet Vermekten Mutluluk duyuyoruz",
         "🌍 Sunucu Yetkilisi Ayarları İçin ca!yetkili",
         "ca!yardım 🔥 + ca!davet 🔥 + ca!öneri"
+        "🔥 Yeni Komutlar için ca!yenilikler 🔥"
     ];
 
     setInterval(function() {
