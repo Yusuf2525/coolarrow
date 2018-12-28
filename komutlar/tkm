@@ -36,7 +36,7 @@ const
 
 exports.run = async (client, msg, args) => {
     if (!args[0]) {
-        return msg.channel.send('Lütfen seçimini yap taş, kağıt yada makas & dve!tkm <taş,kağıt,makas>');
+        return msg.channel.send('Lütfen seçimini yap taş, kağıt yada makas & ca!tkm <taş,kağıt,makas>');
     }
     let choice = args[0].toLowerCase();
     choice = choice === 't' ? 'taş' : choice;
