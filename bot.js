@@ -283,7 +283,6 @@ client.on('message', msg => {
   if (msg.channel.name== 'destek') { 
     const hatay = new Discord.RichEmbed()
     .addField(" Hata ", `Bu Sunucuda \`Destek\` Adında Bir Rol Yok!`)
-    .setColor("RANDOM")
     
     if (!msg.guild.roles.exists("name", "Destek")) return msg.author.send(hatay) + msg.guild.owner.send(`${msg.guild.name} Adlı Sunucunda, \`Destek\` Adlı Bir Rol Olmadığı İçin, Hiçkimse Destek Talebi Açamıyor!`);
     if(msg.guild.channels.find('name', 'talepler')) {
