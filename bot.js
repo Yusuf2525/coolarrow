@@ -305,7 +305,6 @@ client.on('message', msg => {
           READ_MESSAGES: true
       });
 
-      const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setAuthor(`${client.user.username} | Destek Sistemi`)
       .addField(`Merhaba ${msg.author.username}!`, `Destek Yetkilileri burada seninle ilgilenecektir. \nDestek talebini kapatmak için \`${prefix}kapat\` yazabilirsin.`)
