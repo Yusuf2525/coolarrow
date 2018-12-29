@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
 		return
 	}
 
-	let profil = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+	let profil = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
 
 	if(args[0] === "sıfırla") {
 		if(!profil[message.guild.id]) {
@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
 
 	if(isNaN(args[0])) {
 		const embed = new Discord.RichEmbed()
-			.setDescription(`Lütfen Sayaçı Ayarlamam İçin Bir Sayı Bilirt (örnek: ca!sayaç 100`)
+			.setDescription(`Lütfen Sayaçı Ayarlamam İçin Bir Sayı Bilirt (örnek: e-sayaç 100`)
 			.setColor(ayarlar.renk)
 		message.channel.send({embed})
 		return
