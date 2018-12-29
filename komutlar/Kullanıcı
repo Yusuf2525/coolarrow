@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :busts_in_silhouette: Kullanıcı Komutları :busts_in_silhouette:**", `ca!report = İstediğiniz Kullanıcıyı Reportlarsınız. \nca!kısalt = İstediğiniz Linki Kısaltarak Özelleştire Bilirsiniz. \nca!öneri = BOT 'la İlgili Önerilerinizi Yapımcıya İletir \nca!havadurumu = Bot Hava Durumunu Gösterir. \nca!saat = Bot Saatin Kaç Olduğunu Gösterir. \nca!yaz = Bota İsediğinizi Yazdırırsınız. \nca!sunucubilgi = Bulunduğunuz Sunucu Hakkında Bilgi Verir. \nca!sunucuresmi = Bulunduğunuz Sunucunun Resmin Gösterir. \nca!kullanıcıbilgim = Sizin Hakkınızda Bilgi Verir. \nca!avatarım = Avatarınınızı Gösterir. `)
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
