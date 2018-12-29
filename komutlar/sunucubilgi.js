@@ -61,7 +61,7 @@ exports.run = (client, message, params) => {
     .setThumbnail(message.guild.iconURL || message.guild.iconURL)
     .setColor('RANDOM')
     .setTimestamp()
-    .setFooter('ReVa| !davet', client.user.avatarURL)
+    .setFooter('CoolArrow| ca!davet', client.user.avatarURL)
     .setAuthor(message.guild.name, message.guild.iconURL)
     .addField('Ad:', message.guild.name)
     .addField('ID', message.guild.id)
@@ -71,7 +71,7 @@ exports.run = (client, message, params) => {
     .addField('Kanal sayısı :', message.guild.channels.size)
     .addField('Sunucu oluşturma tarihi:', moment(message.guild.createdAt).format('DD/MM/YYYY'), true)
     .addField("» Linkler", `[Bot Davet Linki](https://goo.gl/Q4hxAT)` +  "**\n**"+`[Destek Sunucusu](https://discord.gg/fd2JJet)`, false);
-    console.log("dve!sunucubilgi komutu " + message.author.username + '#' + message.author.discriminator + " tarafından kullanıldı.")
+    console.log("ca!sunucubilgi komutu " + message.author.username + '#' + message.author.discriminator + " tarafından kullanıldı.")
     return message.channel.sendEmbed(sunucubilgi);
     }
 };
