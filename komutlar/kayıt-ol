@@ -9,7 +9,7 @@ module.exports.run = async (client, msg, args) => {
         }
     })
 
-    let role = msg.guild.roles.find(r => r.name === "Üye");
+    let role = msg.guild.roles.find(r => r.name === "Üyeler");
     if (!role) {
         try {
             role = await msg.guild.Role({
