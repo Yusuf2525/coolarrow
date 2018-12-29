@@ -208,7 +208,7 @@ client.on('message', msg => {
 });
  
 client.on("message", async message => {
-    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+    let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
     if(sayac[message.guild.id]) {
         if(sayac[message.guild.id].sayi <= message.guild.members.size) {
             const embed = new Discord.RichEmbed()
@@ -234,8 +234,8 @@ client.on("message", async message => {
  
  
 client.on("guildMemberRemove", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
@@ -256,8 +256,8 @@ client.on("guildMemberRemove", async member => {
  
 });
 client.on("guildMemberAdd", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync(".r/sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
@@ -277,7 +277,7 @@ client.on("guildMemberAdd", async member => {
   }
  
 });client.on("message", async message => {
-    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+    let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
     if(sayac[message.guild.id]) {
         if(sayac[message.guild.id].sayi <= message.guild.members.size) {
             const embed = new Discord.RichEmbed()
@@ -303,8 +303,8 @@ client.on("guildMemberAdd", async member => {
  
  
 client.on("guildMemberRemove", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
@@ -325,8 +325,8 @@ client.on("guildMemberRemove", async member => {
  
 });
 client.on("guildMemberAdd", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
