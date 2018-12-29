@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("Komutlar")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :tada: Eğlence Komutları :tada:**", `ca!eğlence = Eğlence Komutlarını Gösterir `)
   .addField("** :busts_in_silhouette: Kullanıcı Komutları :busts_in_silhouette:**", `ca!kullanıcı = Kullanıcı Komutlarını Gösterir  `)
   .addField("**:video_game:  Oyun Komutları :video_game: **", `ca!oyun = Oyun Komutlarını Gösterir.`)
