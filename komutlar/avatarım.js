@@ -3,7 +3,7 @@ exports.run = function(client, message, args) {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Avatarınız:`)
 .setImage(`${message.author.avatarURL} `)
-.setColor(0xf7dc46));
+.setColor('RANDOM');
    }
 
 
