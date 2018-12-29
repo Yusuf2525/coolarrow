@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :tada: Eğlence Komutları :tada:**", `ca!atatürk = Rastgele Atatürkün Fotoğraflarını Gösterir. \nca!starwars = StarWars (Pixel Formatında) Filmini Gösterir. \nca!banned = Dene ve Gör! \nca!kahkaha = Kahkaha Atarsınız. \nca!nah = Nah Çekersiniz :D \nca!stresçarkı = Stres Çarkı Çevirirsiniz. \nca!yaz = Bota Yazı Yazdırmanızı Sağlar \nca!tkm = Taş Kağıt Makas Oynamanıza Yarar \nca!emojiyazı = Emojiyle Yazmanızı Sağlar  \nca!herkesebendençay = Herkese Çay Alırsınız. \nca!koş = Koşarsınız.\nca!çayiç = Çay İçersiniz. \nca!çekiç = İstediğiniz Kişiye Çekiç Atarsınız. \nca!çayaşekerat = Çaya Şeker Atarsınız. \nca!yumruk-at = Yumruk Atarsınız. \nca!şanslısayım = Bot Sizin Şanslı Sayınızı Söyler. `)
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
