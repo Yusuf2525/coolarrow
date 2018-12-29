@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :video_game:  Oyun Komutları :video_game: **", `ca!fortnite = İstediğiniz Kullanıcının İstatistiklerine Bakarsınız.`)
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
