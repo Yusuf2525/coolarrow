@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :gear:️ Botun Ana Komutları :gear:️ **", `ca!yardım = BOT Komutlarını Atar. \nca!yenilikler = BOT 'a Gelen Yenilikleri Gösterir \nca!bilgi = BOT Kendisi Hakkında Bilgi Verir.(Özel Mesaj Olarak Yollar Özel Mesajları Açınız !) \nca!ping = BOT Gecikme Süresini Söyler. \nca!yapımcı = BOT Yapımcısını Gösterir \nca!davet = BOT Davet Linkini Atar.(Özel Mesaj Olarak Yollar Özel Mesajları Açınız !) \nca!istatistik = BOT İstatistiklerini Gösterir. \nca!yardımsunucusu = Support Server (Yardım Sunucusu) Linkini Gönderir`)
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
