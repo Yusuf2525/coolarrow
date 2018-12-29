@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embedyardim = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
+  .setColor('RANDOM')
   .addField("** :no_entry: Sunucu Yetkilisi Komutları :no_entry: **", `ca!ban = İstediğiniz Kişiyi Sunucudan Banlar. \nca!kick  = İstediğiniz Kişiyi Sunucudan Atar. \nca!unban = İstediğiniz Kişinin Yasağını Açar. \nca!sustur = İstediğiniz Kişiyi Susturur. \nca!rainbıw = Bot Rainbow Rol Ayarlar.(Ayarlamak İçin Botun rolünü e üste alın Rainbow rol oluşturun ve Rainbow rolünü altına koyun) \nca!sil = Belirtilen Miktarda Mesajı Silir. (MAX 100) \nca!oylama = Oylama Açar. \nca!duyuru = Güzel Bir Duyuru Görünümü Sağlar.`)
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
