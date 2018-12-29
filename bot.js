@@ -206,9 +206,8 @@ client.on('message', msg => {
       }, 350);
   }
 });
- 
-client.on("message", async message => {
-    let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
+ client.on("message", async message => {
+    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
     if(sayac[message.guild.id]) {
         if(sayac[message.guild.id].sayi <= message.guild.members.size) {
             const embed = new Discord.RichEmbed()
@@ -234,8 +233,8 @@ client.on("message", async message => {
  
  
 client.on("guildMemberRemove", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
@@ -256,77 +255,8 @@ client.on("guildMemberRemove", async member => {
  
 });
 client.on("guildMemberAdd", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync(".r/sayac.json", "utf8"));  
-  let embed = new Discord.RichEmbed()
-    .setTitle('')
-    .setDescription(``)
- .setColor("GREEN")
-    .setFooter("", client.user.avatarURL);
- 
-  if (!giriscikis[member.guild.id].kanal) {
-    return;
-  }
- 
-  try {
-    let giriscikiskanalID = giriscikis[member.guild.id].kanal;
-    let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
-    giriscikiskanali.send(`:loudspeaker: :inbox_tray: Kullanıcı Katıldı! **${sayac[member.guild.id].sayi}** Kişi Olmamıza **${sayac[member.guild.id].sayi - member.guild.memberCount}** Kişi Kaldı **${member.guild.memberCount}** Kişiyiz! ${process.env.basarili} Hoşgeldin! **${member.user.tag}**` );
-  } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
-    return console.log(e)
-  }
- 
-});client.on("message", async message => {
-    let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
-    if(sayac[message.guild.id]) {
-        if(sayac[message.guild.id].sayi <= message.guild.members.size) {
-            const embed = new Discord.RichEmbed()
-                .setDescription(`Tebrikler ${message.guild.name}! Başarıyla ${sayac[message.guild.id].sayi} kullanıcıya ulaştık! Sayaç sıfırlandı!`)
-                .setColor("RANDOM")
-                .setTimestamp()
-            message.channel.send({embed})
-            delete sayac[message.guild.id].sayi;
-            delete sayac[message.guild.id];
-            fs.writeFile("./ayarlar/sayac.json", JSON.stringify(sayac), (err) => {
-                console.log(err)
-            })
-        }
-    }
-})
- 
-// Sunucuya birisi girdiği zaman mesajı yolluyalım
- 
- 
- 
- 
-// Sunucuya birisi girdiği zaman mesajı yolluyalım
- 
- 
-client.on("guildMemberRemove", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
-  let embed = new Discord.RichEmbed()
-    .setTitle('')
-    .setDescription(``)
- .setColor("RED")
-    .setFooter("", client.user.avatarURL);
- 
-  if (!giriscikis[member.guild.id].kanal) {
-    return;
-  }
- 
-  try {
-    let giriscikiskanalID = giriscikis[member.guild.id].kanal;
-    let giriscikiskanali = client.guilds.get(member.guild.id).channels.get(giriscikiskanalID);
-    giriscikiskanali.send(`:loudspeaker: :outbox_tray: Kullanıcı Ayrıldı. \`${sayac[member.guild.id].sayi}\` Kişi Olmamıza \`${sayac[member.guild.id].sayi - member.guild.memberCount}\` Kişi Kaldı \`${member.guild.memberCount}\` Kişiyiz! :x: **${member.user.tag}**`);
-  } catch (e) { // eğer hata olursa bu hatayı öğrenmek için hatayı konsola gönderelim.
-    return console.log(e)
-  }
- 
-});
-client.on("guildMemberAdd", async member => {
-        let sayac = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));
-  let giriscikis = JSON.parse(fs.readFileSync("./sayac.json", "utf8"));  
+        let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+  let giriscikis = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));  
   let embed = new Discord.RichEmbed()
     .setTitle('')
     .setDescription(``)
