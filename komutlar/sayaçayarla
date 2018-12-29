@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
 
 	if(isNaN(args[0])) {
 		const embed = new Discord.RichEmbed()
-			.setDescription(`Lütfen Sayaçı Ayarlamam İçin Bir Sayı Bilirt (örnek: e-sayaç 100`)
+			.setDescription(`Lütfen Sayaçı Ayarlamam İçin Bir Sayı Bilirt (örnek: ca!sayaç 100`)
 			.setColor(ayarlar.renk)
 		message.channel.send({embed})
 		return
